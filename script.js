@@ -81,6 +81,11 @@ function setLanguage(nextLanguage, persist = true) {
     ? "Portfólio da Geus com sites publicados no Brasil, Estados Unidos e América do Sul."
     : "Geus portfolio featuring live websites built for businesses in the US, Brazil and South America.";
   updateContactLinks();
+  const localizedMenuButton = document.querySelector(".menu-button");
+  if (localizedMenuButton) {
+    const expanded = localizedMenuButton.getAttribute("aria-expanded") === "true";
+    localizedMenuButton.setAttribute("aria-label", expanded ? (language === "pt" ? "Fechar menu" : "Close menu") : (language === "pt" ? "Abrir menu" : "Open menu"));
+  }
   if (persist) localStorage.setItem("geus-language", language);
 }
 
