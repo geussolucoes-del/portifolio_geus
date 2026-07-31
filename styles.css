@@ -169,11 +169,12 @@ footer p:nth-child(2) { text-align: center; }
   .desktop-nav, .header-contact { display: none; }
   .menu-button { display: block; }
   .mobile-menu { inset: 64px 0 0; }
-  .hero { min-height: auto; padding-top: 7.4rem; padding-bottom: 4rem; gap: 2.8rem; }
-  h1 { font-size: clamp(2.75rem, 13.5vw, 4.65rem); line-height: .98; }
+  .hero { min-height: auto; padding-top: 6.25rem; padding-bottom: 4rem; gap: 2.25rem; }
+  h1 { font-size: clamp(2.45rem, 11vw, 3.7rem); line-height: 1; }
   .hero-lead { margin-top: 1.25rem; font-size: .98rem; }
-  .hero-actions { flex-direction: column; }
+  .hero-actions { flex-direction: column; margin-top: 1.5rem; }
   .hero-actions .button { width: 100%; }
+  .hero-proof { display: none; }
   .hero-showcase { min-height: 390px; margin-inline: -4px; }
   .showcase-main { width: 93%; bottom: 0; }
   .showcase-back { width: 78%; top: 1%; }
@@ -204,11 +205,12 @@ footer p:nth-child(2) { text-align: center; }
   footer { grid-template-columns: 1fr; gap: .8rem; padding-block: 2.5rem; text-align: center; }
   footer p:nth-child(2) { text-align: center; }
   .footer-brand { justify-content: center; }
-  .mobile-contact { position: fixed; z-index: 80; left: 1rem; right: 1rem; bottom: max(.75rem, env(safe-area-inset-bottom)); min-height: 48px; display: flex; align-items: center; justify-content: space-between; padding: 0 1rem; background: var(--lime); color: #111; box-shadow: 0 12px 30px rgba(0,0,0,.32); font-size: .82rem; font-weight: 700; }
+  .mobile-contact { position: fixed; z-index: 80; left: 1rem; right: 1rem; bottom: max(.75rem, env(safe-area-inset-bottom)); min-height: 48px; display: flex; align-items: center; justify-content: space-between; padding: 0 1rem; background: var(--lime); color: #111; box-shadow: 0 12px 30px rgba(0,0,0,.32); font-size: .82rem; font-weight: 700; transition: transform .25s ease, opacity .25s ease; }
+  body.hero-visible .mobile-contact { opacity: 0; pointer-events: none; transform: translateY(calc(100% + 2rem)); }
 }
 
 @media (max-width: 390px) {
-  h1 { font-size: 2.7rem; }
+  h1 { font-size: 2.35rem; }
   .language-switch button { min-width: 31px; }
   .project-content { grid-template-columns: 1fr; }
   .project-number { margin-bottom: -.25rem; }

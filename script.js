@@ -4,7 +4,7 @@ const SMS_URL = "sms:+5533998347871";
 const copy = {
   pt: {
     skip: "Ir para os projetos", navProjects: "Projetos", navMethod: "Método", navContact: "Contato", headerContact: "Falar agora",
-    heroEyebrow: "Portfólio digital · projetos no ar", heroTitle: "Sites premium que fazem seu negócio parecer <em>maior</em> no primeiro clique.",
+    heroEyebrow: "Portfólio digital · projetos no ar", heroTitle: "Sites premium para seu negócio parecer <em>maior</em> no primeiro clique.",
     heroLead: "Criamos experiências digitais bonitas, rápidas e estratégicas para marcas no Brasil, nos Estados Unidos e na América do Sul.", viewProjects: "Ver projetos",
     heroProof: "Projetos publicados no Brasil, EUA e América do Sul.", liveCount: "projetos publicados",
     projectsKicker: "Projetos selecionados", projectsTitle: "O trabalho fala primeiro.", projectsIntro: "Uma curadoria de sites reais, publicados e construídos para transformar atenção em confiança.",
@@ -114,6 +114,13 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { rootMargin: "0px 0px -8%", threshold: .08 });
 document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+
+const hero = document.querySelector(".hero");
+document.body.classList.add("hero-visible");
+const heroObserver = new IntersectionObserver(([entry]) => {
+  document.body.classList.toggle("hero-visible", entry.isIntersecting);
+}, { threshold: .08 });
+heroObserver.observe(hero);
 
 document.getElementById("year").textContent = new Date().getFullYear();
 setLanguage(language, false);
