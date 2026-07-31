@@ -141,10 +141,12 @@ h1 em { color: var(--violet); font-style: normal; }
 .cta-orbit { position: absolute; width: min(70vw, 760px); opacity: .08; transform: rotate(-15deg); }
 .cta-orbit img { width: 100%; }
 
-footer { min-height: 150px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 2rem; padding: 2rem var(--pad); color: var(--muted); border-top: 1px solid var(--line); }
+footer { min-height: 150px; display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 2rem; padding: 2rem var(--pad); color: var(--muted); border-top: 1px solid var(--line); }
 .footer-brand { color: var(--text); }
 footer p { margin: 0; font-size: .72rem; }
 footer p:nth-child(2) { text-align: center; }
+.footer-social { color: var(--text); font-size: .75rem; font-weight: 600; transition: color .2s; }
+.footer-social:hover { color: var(--lime); }
 .mobile-contact { display: none; }
 
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
