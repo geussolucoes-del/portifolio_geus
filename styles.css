@@ -122,7 +122,7 @@ h1 em { color: var(--violet); font-style: normal; }
 .more-list > a { min-height: 132px; display: grid; grid-template-columns: 52px 160px 1fr auto; align-items: center; gap: 1.25rem; border-bottom: 1px solid var(--line); transition: padding .2s, color .2s; }
 .more-list > a:hover { padding: 0 .75rem; color: var(--lime); }
 .more-index { color: #686770; font-size: .68rem; }
-.more-list img { width: 160px; aspect-ratio: 16 / 9; object-fit: cover; object-position: top; filter: saturate(.85); }
+.more-list img { width: 160px; height: 90px; object-fit: cover; object-position: top; filter: saturate(.85); }
 .more-list strong { display: block; font: 600 clamp(1.2rem, 2.4vw, 1.8rem)/1.2 "Manrope", sans-serif; }
 .more-list small { display: block; margin-top: .35rem; color: var(--muted); font-size: .72rem; }
 
@@ -200,7 +200,7 @@ footer p:nth-child(2) { text-align: center; }
   .proof-strip div { min-height: 150px; border-right: 0; border-bottom: 1px solid var(--line); }
   .proof-strip div:last-child { border-bottom: 0; }
   .more-list > a { min-height: 108px; grid-template-columns: 28px 86px 1fr auto; gap: .75rem; }
-  .more-list img { width: 86px; }
+  .more-list img { width: 86px; height: 48px; }
   .final-cta { min-height: 640px; }
   footer { grid-template-columns: 1fr; gap: .8rem; padding-block: 2.5rem; text-align: center; }
   footer p:nth-child(2) { text-align: center; }
